@@ -12,13 +12,12 @@ from pathlib import Path
 from backend import analyze_image, analyze_video, generate_report
 
 import os
-from dotenv import load_dotenv
-
-load_dotenv()   # loads variables from .env
 
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-print(groq_api_key)
+if not groq_api_key:
+    st.error("GROQ_API_KEY missing. Add it in Streamlit Secrets.")
+    st.stop()
 # ─── Page config ─────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="♻️ RecycleVision AI",
