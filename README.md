@@ -6,21 +6,40 @@ Vision-Based Recycling Intelligence system for plastic bottle classification and
 
 ## Quick Start
 
+### 1. Clone Repository
+
 ```bash
-# 1. Clone / extract the project
-cd recycling_ai
+git clone https://github.com/Rishi-Sunkavalli/Vision-Based-Recycling-Intelligence.git
+cd Vision-Based-Recycling-Intelligence
+```
 
-# 2. Install dependencies
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# 3. Set your Groq API key
-export GROQ_API_KEY="gsk_..."
+### 3. Run Locally
 
-# 4. Run the Streamlit dashboard
+```bash
 streamlit run app.py
 ```
 
-Open http://localhost:8501 in your browser, upload a batch image or short video, and click **Analyse Batch**.
+### 4. Deploy Version
+
+Live Streamlit App:  
+https://vision-based-recycling-intelligence.streamlit.app/
+
+Add your `GROQ_API_KEY` in Streamlit Secrets before using cloud deployment.
+
+---
+
+## Screenshots & Architecture
+
+### Architecture Diagram
+
+![Architecture](architecture.png)
+
 
 ---
 
